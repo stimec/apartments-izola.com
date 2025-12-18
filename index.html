@@ -1,18 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Apartments Izola</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartments Izola | Slovenia</title>
+    <!-- Modern Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body { text-align: center; font-family: sans-serif; padding: 50px; }
-        img { max-width: 100%; height: auto; border-radius: 10px; }
-        a { display: block; margin-top: 20px; font-size: 20px; color: #007bff; text-decoration: none; }
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d4af37; /* Elegant Gold */
+            --text-light: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body, html {
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-light);
+            overflow: hidden;
+        }
+
+        /* Background Image with Overlay */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('background.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content {
+            max-width: 700px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* The main Button */
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-color);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Social/Location Footer */
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to Apartments Stimec Izola</h1>
-    <!-- Replace 'your-image.jpg' with your actual image file name -->
-    <img src="house-preview.jpg" alt="Apartment Izola">
-    <br>
-    <a href="https://stimec.eu">Click here to visit our main website: Stimec.eu</a>
+
+    <section class="hero">
+        <div class="content">
+            <p>Welcome to the Adriatic Coast</p>
+            <h1>Apartments Izola</h1>
+            <a href="https://stimec.eu" class="btn">View Availability & Book Now</a>
+        </div>
+    </section>
+
+    <div class="footer">
+        &copy; 2024 Stimec.eu • Izola, Slovenia
+    </div>
+
 </body>
 </html>
